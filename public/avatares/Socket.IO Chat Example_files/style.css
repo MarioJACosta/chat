@@ -1,0 +1,156 @@
+/* Fix user-agent */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, input {
+    font-family: 'Lato', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 10px
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background: url('background3.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+.pages{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: #ffffff;
+}
+/* CHAT PAGE */
+.navbar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25%; 
+    height: 100%;
+    border-radius: 0px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.navbar-title{
+    font-weight: 600;
+}
+.fa-user{
+    color: green;
+}
+.fa-user-times{
+    color: red;
+}
+.chatArea{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 75%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23d7d7d8' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.chatAreaHeader{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 3.5px 3px 6px rgba(0,0,0,0.23);
+}
+.chatAreaHeaderUserAvatar{
+    width: 90px;
+    margin-left: 50px;
+    margin-top: 6px;
+    display: inline-block;
+}
+.chatAreaHeaderUserInfotTitle{
+    display: inline-block;
+    margin-left: 40px;
+}
+.chatAreaButtons{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    height: 52px;
+    background-color: white;    
+    box-shadow: 3.5px -2px 6px rgba(0,0,0,0.23);
+}
+.chatAreaButtonsInputMessage{
+    border: 0;
+    position: absolute;
+    top: 0;
+    height: 52px;
+    width: 90%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+.chatAreaButtonsGroup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 52px;
+    width: 10%;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+.chatAreaButton{
+    border: 0;
+    width: 50%;
+    height: 52px;
+    display: block;
+    float: right;
+    background: transparent;
+}
+.chat.page{
+    display: none;
+}
+/* LOGIN PAGE */
+.login.page{
+
+}
+.formLogin{
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+.profileImgLogin{
+    border-radius: 50%;
+}
+.usernameInput{
+    
+}
+.avatarLogin{
+    width: 100px;
+}

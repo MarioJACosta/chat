@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Socket.IO Chat Example</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/sweetalert2/6.4.4/sweetalert2.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/sweetalert2/6.4.4/sweetalert2.min.js"></script>        
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+
+        <div class="wrapper">
+            <div class="pages">
+                <div class="chat page">
+
+                    <div class="navbar">
+
+                        <h4 class="navbar-title text-center">Users</h4>
+                        <ul id="usersOnline"></ul>  
+
+                        <hr>
+
+                        <h4 class="navbar-title text-center">Rooms</h4>
+                        <ul id="openRooms">
+                            <li class="room"><i class="fa fa-user" aria-hidden="true"></i> Room test</li>
+                        </ul>
+
+                    </div><!-- Navbar -->
+
+                    <div class="chatArea">
+                        <div class="chatAreaHeader">
+                            <div class ="chatAreaHeaderUserInfo">
+                                <p class="chatAreaHeaderUserInfoStatus"></p>
+                            </div>
+                        </div>
+
+                        <ul class="messages"></ul>
+                        <div class="chatAreaButtons">
+
+                            <input type="text" class="chatAreaButtonsInputMessage" placeholder="Message" />
+
+                            <div class="chatAreaButtonsGroup">
+
+                                <button class="chatAreaButton" id="delete" type="button">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+
+                                <button class="chatAreaButton" id="send" type="button">
+                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div><!-- Chat Area -->  
+                </div><!-- Chat Page -->  
+
+                <div class="login page">
+                    <div class="formLogin">
+                        <img class="profileImgLogin" src="avatares/photo.png">
+
+                        <input class="usernameInput" type="text" maxlength="14" placeholder="What's your nickname?" autofocus required/>
+
+                        <div class="avatarChoiceLogin">
+                            <img src="avatares/deadpool.png" class="avatarLogin" id="deadpool">
+
+                            <img src="avatares/homer.png"  class="avatarLogin" id="homer">
+
+                            <img src="avatares/superman.png"  class="avatarLogin" id="superman">
+
+                            <img src="avatares/wolverine.png"  class="avatarLogin" id="wolverine">
+                        </div>
+                    </div>
+                </div><!-- Login page -->
+            </div><!-- Pages -->                
+        </div><!-- Wrapper -->
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/sweetalert2/6.4.4/sweetalert2.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>
